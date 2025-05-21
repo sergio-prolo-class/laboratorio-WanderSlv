@@ -3,7 +3,7 @@
 int main()
 {
     float altura, largura, profundidade;
-    float total, area, valor;
+    float total = 0, area, valor = 0;
     int qtd_caixa;
 
     printf("Digite a Altrua (m): ");
