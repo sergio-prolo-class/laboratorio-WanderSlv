@@ -3,6 +3,7 @@
 int main()
 {
     int dia, mes, ano;
+    int mesValido = 1;
 
     printf("Digite a data no formato 'dd/mm/aaaa': ");
     scanf("%d/%d/%d", &dia, &mes, &ano);
@@ -44,28 +45,34 @@ int main()
         case 12:
             printf("Dezembro ");
             break;
-    }
-
-    switch (dia) {
-        case 1:
-        case 21:
-        case 31:
-            printf("%dst", dia);
-            break;
-        case 2:
-        case 22:
-            printf("%dnd", dia);
-            break;
-        case 3:
-        case 23:
-            printf("%drd", dia);
-            break;
         default:
-            printf("%dth", dia);
+            printf("mes inexistente.\n");
+            mesValido = 0;
             break;
     }
-
-    printf(" %d\n", ano);
+    if (mesValido) {
+        switch (dia) {
+            case 1:
+            case 21:
+            case 31:
+                printf("%dst", dia);
+                break;
+            case 2:
+            case 22:
+                printf("%dnd", dia);
+                break;
+            case 3:
+            case 23:
+                printf("%drd", dia);
+                break;
+            default:
+                printf("%dth", dia);
+                break;
+        }
+        printf(" %d\n", ano);
+    } else {
+        printf("programa encerrado.\n");
+    }
 
     return 0;
 }
