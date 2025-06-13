@@ -61,7 +61,8 @@ int main()
             case 22:
                 printf("%dnd", dia);
                 break;
-            case 3:
+            ,
+                case 3:
             case 23:
                 printf("%drd", dia);
                 break;
