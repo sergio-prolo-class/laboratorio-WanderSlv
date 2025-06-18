@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main()
+{
+    int n, div = 1;
+
+    printf("Entre com um inteiro positivo: ");
+    scanf("%d", &n);
+
+    printf("Divisores: [1");
+    for (int i = 2; i <= n; i++) {
+        if (n % i == 0) {
+            div++;
+            printf(", %d", i);
+        }
+    }
+    printf("]\n");
+    printf("%s\n", (div == 2) ? "É primo" : "Não é primo");
+
+    return 0;
+}
